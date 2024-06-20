@@ -135,11 +135,11 @@
         <div class="nav">
           <div class="navItem"><a href="./hd.html">首页</a></div>
           <div class="navItem"><a href="./xy.html">学院简介</a></div>
-          <div class="navItem active">学院教学</div>
+          <div class="navItem active">专业介绍</a></div>
+          <div class="navItem">师资队伍</div>
+          <div class="navItem">招生信息</div>
+          <div class="navItem">新闻动态</div>
           <div class="navItem">学术科研</div>
-          <div class="navItem">学院就业</div>
-          <div class="navItem">学院文化</div>
-          <div class="navItem">师生互动</div>
           <div class="navItem">联系我们</div>
         </div>
       </div>
@@ -166,28 +166,28 @@
         </div>
         <div class="zyny">
           <div style="text-align: center;width: 100%">
-            <img style="width: 500px" src="./img/数媒技1.jpeg">
+            <img style="width: 500px" src="https://syxy.hdu.edu.cn/_upload/article/images/f8/66/6e4c611946f6bfc2063039e3e499/c735a4bf-de3a-4738-82ba-357586191319.jpg" alt="">
           </div>
           <div style="text-align: center;width: 100%">
-            <img style="width: 500px" src="./img/数媒技2.jpeg">
-          </div>
-        </div>
-        <div class="zyny">
-          <div style="text-align: center;width: 100%">
-            <img style="width: 500px" src="./img/传播1.jpeg">
-          </div>
-          <div style="text-align: center;width: 100%">
-            <img style="width: 500px" src="./img/传播2.jpeg">
+            <img style="width: 500px" src="https://syxy.hdu.edu.cn/_upload/article/images/f8/66/6e4c611946f6bfc2063039e3e499/ac3b9c77-1cd9-4b51-977a-bb23831afb36.jpg" alt="">
           </div>
         </div>
         <div class="zyny">
           <div style="text-align: center;width: 100%">
-            <img style="width: 500px" src="./img/产品设计.jpeg">
+            <img style="width: 500px" src="https://syxy.hdu.edu.cn/_upload/article/images/87/1c/3499a3774cb3a0eac0b9f593c784/6183c5f7-5e87-4f0b-b90f-6bb81be713cb.jpg" alt="">
+          </div>
+          <div style="text-align: center;width: 100%">
+            <img style="width: 500px" src="https://syxy.hdu.edu.cn/_upload/article/images/87/1c/3499a3774cb3a0eac0b9f593c784/7d24817d-2d20-43ce-a1a4-07cfda990bb1.jpg" alt="">
           </div>
         </div>
         <div class="zyny">
           <div style="text-align: center;width: 100%">
-            <img style="width: 500px" src="./img/工业设计.jpeg">
+            <img style="width: 500px" src="https://syxy.hdu.edu.cn/_upload/article/images/77/24/6f9cdd794b9cb8d10b2a1f854920/b5894390-6554-4221-87b3-5e5499743b54.jpg" alt="">
+          </div>
+        </div>
+        <div class="zyny">
+          <div style="text-align: center;width: 100%">
+            <img style="width: 500px" src="https://syxy.hdu.edu.cn/_upload/article/images/38/f6/8d2ff6b34b7d982e6bca6a6021fa/c69ba691-f157-4f51-a129-84ab7fa5df63.jpg" alt="">
           </div>
         </div>
       </div>
@@ -208,4 +208,25 @@
     </div>
   </div>
 </body>
+<script>
+  function showZynr() {
+    var zyItems = document.querySelectorAll('.zy');
+    var zynyItems = document.querySelectorAll('.zyny');
+    zyItems.forEach(function(item, index) {
+        item.addEventListener('click', function() {
+            zyItems.forEach(function(item) {
+                item.classList.remove('activeZy');
+            });
+            zynyItems.forEach(function(item) {
+                item.classList.remove('activeZyny');
+            });
+            zynyItems[index].classList.add('activeZyny');
+            this.classList.add('activeZy');
+        });
+    });
+  }
+  showZynr();
+  document.querySelectorAll('.zy')[0].classList.add('activeZy');
+  document.querySelectorAll('.zyny')[0].classList.add('activeZyny');
+</script>
 </html>
